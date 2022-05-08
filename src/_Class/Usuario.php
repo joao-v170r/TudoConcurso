@@ -10,6 +10,8 @@ class Usuario {
     private array $perfilConcurso;
     private array $bancaCharge;
 
+    public static int $qntUsuarios = 0;
+
     public function __construct(string $dtNascimento, string $cpf, int $idUser, string $nome, string $cep, string $email){
         $this->$dtNascimento = $dtNascimento;
         $this->$cpf = $cpf;
@@ -17,6 +19,11 @@ class Usuario {
         $this->$nome = $nome;
         $this->$cep = $cep;
         $this->$email = $email;
+
+        self::$qntUsuarios++;
     }
+
+    
+
 
 }
