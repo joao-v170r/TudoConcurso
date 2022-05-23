@@ -11,7 +11,7 @@
 <title>Tudo Concurso</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-gradient">
+<nav class="navbar navbar-expand-lg navMain-fixed col-md-12">
   <div class="align-items container-fluid">
     <a class="navbar-brand" href="#body">
         <svg width="261" height="49" viewBox="0 0 261 49" fill="none" xmlns="http://www.w3.org/2000/svg">
