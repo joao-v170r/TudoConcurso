@@ -22,7 +22,6 @@ class Usuario {
 
         self::$qntUsuarios++;
     }
-
     
 
 
