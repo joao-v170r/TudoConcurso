@@ -1,29 +1,61 @@
 <?php 
 
 class Usuario {
-    public readonly string $dtNascimento;
-    public readonly string $cpf;
-    public readonly int $idUser;
+    private string $dtNascimento;
     private string $nome;
     private string $cep;
     private string $email;
-    private array $perfilConcurso;
-    private array $bancaCharge;
+    private string $senha;
 
-    public static int $qntUsuarios = 0;
+    private static int $qntUsuarios = 0;
 
-    public function __construct(string $dtNascimento, string $cpf, int $idUser, string $nome, string $cep, string $email){
-        $this->$dtNascimento = $dtNascimento;
-        $this->$cpf = $cpf;
-        $this->$idUser = $idUser;
-        $this->$nome = $nome;
-        $this->$cep = $cep;
-        $this->$email = $email;
-
+    public function __construct(){
         self::$qntUsuarios++;
     }
 
-    
+    public function getNome (): string{
+        return $this->nome;
+    }
 
+    public function setNome (string $nome): void{
+        if(strlen($nome) > 5){
+            $this->nome = $nome;
+        }
+    }
+
+    public function getCep (): string{
+        return $this->cep;
+    }
+
+    public function setCep (string $cep): void{
+        $this->cep = $cep;
+    }
+
+    public function getEmail (): string{
+        return $this->email;
+    }
+
+    public function setEmail (string $email): void{
+        $this->email = $email;
+    }
+    
+    public function getDtNascimento (): string{
+        return $this->dtNascimento;
+    }
+
+    public function setDtNascimento (DateTime $dtNascimento): void{
+        if(!empty($dtNascimento) && $dtNascimento->format('d-m-Y') != "00/00/0000"){
+            $this->dtNascimento = $dtNascimento->format('d-m-Y');
+        }
+    }
+    public function getSenha(): string{
+        return $this->senha;
+    }
+
+    public function setSenha (string $senha): void{
+        if(!empty($senha) && strlen($senha) >= 8){
+            $this->senha = $senha;
+        }        
+    }
 
 }
