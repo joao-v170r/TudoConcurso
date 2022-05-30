@@ -1,6 +1,4 @@
 <?php
-require 'dadosBanco.php';
-require '../functionsDao.php';
 
 class Conexao {
 
@@ -13,14 +11,14 @@ class Conexao {
     public static function getConect() {
         try {
 
-            if (!isset(self::$instance)) {
+            if (!isset(self::$conect)) {
 
-                self::$conect = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+                self::$conect = new PDO("mysql:host=localhost;dbname=id18889760_bdmanualphp", "id18889760_hoot", "tF/JJDC%xklL2JU+");
                     self::$conect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             }            
         } catch (PDOException $erro) {
-            mostraErroLog($erro, __METHOD__);
+            print_r($erro);
         }
 
         return self::$conect;
@@ -28,3 +26,4 @@ class Conexao {
     
 }
 
+?>

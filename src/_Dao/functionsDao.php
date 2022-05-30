@@ -12,3 +12,4 @@ function mostraErroLog(object $erro, string $nameFunction){
     </script>
     ";
 }
+?>
