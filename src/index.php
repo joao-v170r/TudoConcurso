@@ -1,30 +1,34 @@
 <?php
     include 'header.php';
 ?>
-<div class="container">
-    <h3>
-        
-    </h3>
-
-    <div class="card" style="width: 18rem;">
-        <img src="../assets/img/livros.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Qual Sua materia favorita</h5>
-                <p class="card-text">Qual e a sua materia que você mais gostava no ensino medio</p>
-            </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Ciencias</li>
-            <li class="list-group-item">Algebrar</li>
-            <li class="list-group-item">Geografia</li>
-            <li class="list-group-item">Letras</li>
-            <li class="list-group-item">Historia</li>
-        </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Anterior</a>
-                <a href="#" class="card-link">Proximo</a>
+<div class="body-content"> 
+    <div class="row">
+        <?php for($i = 0; $i < 5; $i++){ ?>
+        <div class=" col-6">
+            <div class="card card-notice">
+                <img src="../assets/img/livros.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Concurso DPE PR</h5>
+                    <p class="card-text"> A Defensoria Pública do Paraná divulgou o regulamento de seu novo concurso para o quadro de servidores. O regulamento vai nortear a contratação da banca e a elaboração do edital, que vai ofertar vagas para cargos de níveis superior, médio e médio/técnico.</p>
+                    <p class="card-text"><small class="text-muted">Comissão formada</small></p>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="col-6">
+            <div class="card card-notice">
+                <img src="../assets/img/livros.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Concurso DPE PR</h5>
+                    <p class="card-text"> A Defensoria Pública do Paraná divulgou o regulamento de seu novo concurso para o quadro de servidores. O regulamento vai nortear a contratação da banca e a elaboração do edital, que vai ofertar vagas para cargos de níveis superior, médio e médio/técnico.</p>
+                    <p class="card-text"><small class="text-muted">Comissão formada</small></p>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </div>     
+</div>
+<script>
+</script>
 <?php
     include 'footer.php';
 ?>

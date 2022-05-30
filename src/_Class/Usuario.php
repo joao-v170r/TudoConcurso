@@ -11,11 +11,7 @@ class Usuario {
 
     public function __construct(){
         self::$qntUsuarios++;
-    }
-
-    public function getNome (): string{
-        return $this->nome;
-    }
+    }    
 
     public function setNome (string $nome): void{
         if(strlen($nome) > 5){
