@@ -1,6 +1,10 @@
 <?php
     include 'header.php';
 ?>
+<br>
+<br>
+<br>
+<br>
 <div class="testbox">
   <form class="pageForm" action="/">
     <h1 class="pageTitle">Questionário</h1>
