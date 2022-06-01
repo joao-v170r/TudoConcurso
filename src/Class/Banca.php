@@ -1,4 +1,5 @@
 <?php
+namespace TudoConcurso\Class;
 
 class Banca {
     private string $nome;

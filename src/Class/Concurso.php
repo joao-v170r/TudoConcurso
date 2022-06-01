@@ -1,4 +1,5 @@
 <?php
+namespace TudoConcurso\Class;
 
 class Concurso {
     private string $dtProva;
@@ -45,9 +46,12 @@ class Concurso {
         return $this->dtProva;
     }
 
-    public function setDtProva (DateTime $dtProva): void{
-        if(!empty($dtProva) && $dtProva->format('d-m-Y') != "00/00/0000"){
-            $this->dtProva = $dtProva->format('d-m-Y');
+    public function setDtProva (string $dtProva): void{
+        if(!empty($dtProva) && $dtProva != "00/00/0000"){
+            $this->dtProva = date('Y-m-d', strtotime($dtProva));;
+        } else {
+            echo "Error in " . __METHOD__ ;
+            exit();
         }
     }
     public function getIdBanca(): int{

@@ -1,10 +1,12 @@
-<?php
-    //include 'header.php';
-    include '_Class/Usuario.php';
-    include '_Dao/UsuarioDao.php';
-    $salve = isset($_POST['btn']) ? $_POST['btn'] : '';
-    if(!empty($salve)){
-        include '_Controller/Usuario/salvarUsuarioController.php';
+<?php 
+    
+
+    require 'autoload.php';
+
+    if(isset($_POST['btn'])){ 
+
+        include 'Controller/Usuario/salvarUsuarioController.php';
+
     }
 ?>
 <div class="body-content">
