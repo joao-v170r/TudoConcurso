@@ -1,5 +1,5 @@
 <?php
-namespace TudoConcurso\Class;
+namespace TudoConcurso\Model;
 
 class Banca {
     private string $nome;

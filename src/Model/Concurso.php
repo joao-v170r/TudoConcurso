@@ -1,13 +1,18 @@
 <?php
-namespace TudoConcurso\Class;
+namespace TudoConcurso\Model;
 
 class Concurso {
     private string $dtProva;
     private string $nome;
-    private string $cep;
+    private string $localProva;
     private string $perfil;
     private string $tipo;
-    private string $idBanca;
+    private int $idBanca;
+    private string $ensino;
+    private float $salario;
+    private int $qntVagas;
+    private string $comissao;
+    private float $valorProva;
 
     public function __construct() {
         //
@@ -20,15 +25,24 @@ class Concurso {
     public function setNome (string $nome): void{
         if(strlen($nome) > 5){
             $this->nome = $nome;
-        }
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        } 
     }
 
-    public function getCep (): string{
-        return $this->cep;
+    public function getLocalProva (): string{
+        return $this->localProva;
     }
 
-    public function setCep (string $cep): void{
-        $this->cep = $cep;
+    public function setLocalProva (string $localProva): void{
+        
+        if(empty($localProva)){
+            $this->localProva = $localProva;
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        } 
     }
 
     public function getPerfil (): string{
@@ -39,7 +53,10 @@ class Concurso {
         $tipoConcurso = ['Judiciario', 'Adminstrativo', 'Controle', 'Segurança', 'Fiscal', 'Lesgislativa', 'Alta Gestão', 'Magistério', 'Militar', 'Bancária'];
         if(in_array($perfil, $tipoConcurso)){
             $this->perfil = $perfil;            
-        }
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        } 
     }
     
     public function getDtProva (): string{
@@ -61,7 +78,10 @@ class Concurso {
     public function setIdBanca (int $idBanca): void{
         if(!empty($idBanca)){
             $this->idBanca = $idBanca;
-        }        
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        }      
     }
 
     public function getTipo (): string {
@@ -73,7 +93,10 @@ class Concurso {
 
         if(in_array($tipo, $listTipos)){
             $this->tipo = $tipo;
-        }
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        } 
         
     }
     

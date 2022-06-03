@@ -1,5 +1,5 @@
 <?php 
-namespace TudoConcurso\Class;
+namespace TudoConcurso\Model;
 
 class Usuario {
     private string $dtNascimento;
@@ -7,6 +7,8 @@ class Usuario {
     private string $cep;
     private string $email;
     private string $senha;
+    private string $ensino;
+    private string $salarioEsperado;
 
     private static int $qntUsuarios = 0;
 
@@ -19,6 +21,32 @@ class Usuario {
         self::$qntUsuarios--;
     }
 
+    public function getEnsino() {
+        return $this->ensino;
+    }
+
+    public function setEnsino (string $ensino): void{
+        if(!empty($ensino)){
+            $this->ensino = $ensino;
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        }
+    }
+
+    public function getSalarioEsperado() {
+        return $this->salarioEsperado;
+    }
+
+    public function setSalarioEsperado (string $salarioEsperado): void{
+        if(!empty($salarioEsperado)){
+            $this->salarioEsperado = $salarioEsperado;
+        } else {
+            echo "Error in " . __METHOD__ ;
+            return;
+        }
+    }
+
     public function getNome() {
         return $this->nome;
     }
@@ -28,7 +56,7 @@ class Usuario {
             $this->nome = $nome;
         } else {
             echo "Error in " . __METHOD__ ;
-            exit();
+            return;
         }
     }
 
@@ -41,7 +69,7 @@ class Usuario {
             $this->cep = $cep;
         } else {
             echo "Error in " . __METHOD__ ;
-            exit();
+            return;
         }
         
     }
@@ -55,7 +83,7 @@ class Usuario {
             $this->email = $email;
         } else {
             echo "Error in " . __METHOD__ ;
-            exit();
+            return;
         }
     }
     
@@ -68,7 +96,7 @@ class Usuario {
             $this->dtNascimento = date('Y-m-d', strtotime($dtNascimento));;
         } else {
             echo "Error in " . __METHOD__ ;
-            exit();
+            return;
         }
     }
     public function getSenha(): string{
@@ -80,7 +108,7 @@ class Usuario {
             $this->senha = md5($senha);
         } else {
             echo "Error in " . __METHOD__ ;
-            exit();
+            return;
         }       
     }
 

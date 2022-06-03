@@ -1,6 +1,8 @@
 <?php
-use TudoConcurso\Class\Usuario;
-use TudoConcurso\Class\Dao\UsuarioDao;
+namespace TudoConcurso\Controller\Usuario;
+
+use TudoConcurso\Model\Usuario;
+use TudoConcurso\DataBase\UsuarioDao;
 
 $objUser = new Usuario();
 $objUserDao = new UsuarioDao();
@@ -18,7 +20,8 @@ $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
  $objUser->setDtNascimento($dtNascimento);
  $objUser->setSenha($senha);        
            
- //print_r($objUser);
+ 
  $objUserDao->salvaUsuario($objUser);
  
+
 ?>
