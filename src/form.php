@@ -4,13 +4,16 @@
 <div class="testbox">
   <form class="pageForm" action="/">
     <h1 class="pageTitle">Questionário</h1>
-    <p class="question">Para qual área você deseja prestar concurso público?</p>
+    <p class="question">Para qual dessas áreas você prefere prestar concurso público?</p>
     <div class="question-answer">
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Judiciária</label>
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Segurança</label>
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Magistério</label>
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Administrativa</label>
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Fiscal</label>
+    </div>
+    <p class="question">Para qual dessas áreas você prefere prestar concurso público?</p>
+    <div class="question-answer">
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Militar</label>
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Controle</label>
       <label><input class="pageInput" type="radio" value="none" name="visited" /> Legislativa</label>
