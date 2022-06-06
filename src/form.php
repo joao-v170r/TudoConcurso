@@ -10,19 +10,19 @@
     <h1 class="pageTitle">Questionário</h1>
     <p class="question">Para qual dessas áreas você prefere prestar concurso público?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao1" /> Judiciária</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao1" /> Segurança</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao1" /> Magistério</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao1" /> Administrativa</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao1" /> Fiscal</label>
+      <label><input class="pageInput" type="radio" value="Judiciario" name="questao1" /> Judiciária</label>
+      <label><input class="pageInput" type="radio" value="Segurança" name="questao1" /> Segurança</label>
+      <label><input class="pageInput" type="radio" value="Magistério" name="questao1" /> Magistério</label>
+      <label><input class="pageInput" type="radio" value="Adminstrativo" name="questao1" /> Administrativa</label>
+      <label><input class="pageInput" type="radio" value="Fiscal" name="questao1" /> Fiscal</label>
     </div>
     <p class="question">Para qual dessas áreas você prefere prestar concurso público?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao2" /> Militar</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao2" /> Controle</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao2" /> Legislativa</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao2" /> Bancária</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao2" /> Alta Gestão</label>
+      <label><input class="pageInput" type="radio" value="Militar" name="questao2" /> Militar</label>
+      <label><input class="pageInput" type="radio" value="Controle" name="questao2" /> Controle</label>
+      <label><input class="pageInput" type="radio" value="Lesgislativa" name="questao2" /> Legislativa</label>
+      <label><input class="pageInput" type="radio" value="Bancária" name="questao2" /> Bancária</label>
+      <label><input class="pageInput" type="radio" value="Alta Gestão" name="questao2" /> Alta Gestão</label>
     </div>
     <p class="question">Em qual região você mora?</p>
     <div class="question-answer">
