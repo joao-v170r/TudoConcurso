@@ -8,8 +8,8 @@ Tarefas:
 <p>☑️ - Feitos | ⬜ - A fazer | 2 Semanas de estima por tarefa</p>
 </p>
     <div>
-    <p>⬜: Preparação do Ambiente de programação</p>
-    <p>⬜: Iniciaçização do repositorios de versão (GIT)</p>
+    <p>☑️: Preparação do Ambiente de programação</p>
+    <p>☑️: Iniciaçização do repositorios de versão (GIT)</p>
     <p>⬜: Criando o metodo de persitencia com o banco</p>
     <p>⬜: Programação do projeto MVP</p>
     <p>⬜: Teste finais (Unitarios, Integração, Ambiente)</p>
