@@ -2,6 +2,9 @@
 namespace TudoConcurso\Model;
 
 class Banca {
+
+    use AcesssoAtributos;
+
     private string $nome;
     private string $descricao;
 
@@ -9,18 +12,10 @@ class Banca {
        //
     }
 
-    public function getNome (): string{
-        return $this->nome;
-    }
-
     public function setNome (string $nome): void{
         if(strlen($nome) > 5){
             $this->nome = $nome;
         }
-    }
-
-    public function getDescricao (): string{
-        return $this->descricao;
     }
 
     public function setDescricao (string $descricao): void{

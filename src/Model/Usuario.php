@@ -2,6 +2,9 @@
 namespace TudoConcurso\Model;
 
 class Usuario {
+
+    use AcesssoAtributos;
+
     private string $dtNascimento;
     private string $nome;
     private string $cep;

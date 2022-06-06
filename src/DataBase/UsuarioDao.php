@@ -3,6 +3,7 @@ namespace TudoConcurso\DataBase;
 
 use TudoConcurso\DataBase\Instancia\Conexao;
 use TudoConcurso\Model\Usuario;
+use TudoConcurso\Service\InteresaUser;
 
 use PDOException;
 
@@ -13,17 +14,17 @@ class UsuarioDao extends Conexao{
     }    
     
     public function salvaUsuario(Usuario $objUser): void{
-        if(empty($objUser->getSenha()) && empty($objUser->getEmail()) && empty($objUser->getNome()) && empty($objUser->getCep()) && empty($objUser->getDtNascimento())){                        
+        if(empty($objUser->senha) && empty($objUser->email) && empty($objUser->nome) && empty($objUser->cep) && empty($objUser->dtNascimento)){                        
             //print_r($objUser);
             echo "Error in " . __METHOD__ . "Dados vazios";    
             exit();        
         }
         
-        $dtNascimento = $objUser->getDtNascimento();
-        $nome = $objUser->getNome();
-        $cep = $objUser->getCep();
-        $email = $objUser->getEmail();
-        $senha = $objUser->getSenha();
+        $dtNascimento = $objUser->dtNascimento;
+        $nome = $objUser->nome;
+        $cep = $objUser->cep;
+        $email = $objUser->email;
+        $senha = $objUser->senha;
 
         try {
 
@@ -44,15 +45,15 @@ class UsuarioDao extends Conexao{
     }
     
     public function incluirDadosFacultativos(int $idUser, Usuario $objUser):void{
-        if(empty($objUser->getEnsino()) && empty($objUser->getSalarioEsperado())){ 
+        if(empty($objUser->ensino) && empty($objUser->salarioEsperado)){ 
 
             echo "Error in " . __METHOD__ . "Dados vazios";    
             exit();
 
         }
         
-        $ensino = $objUser->getEnsino();
-        $salario = $objUser->getSalarioEsperado();
+        $ensino = $objUser->ensino;
+        $salario = $objUser->salarioEsperado;
         
         try {
 
@@ -71,13 +72,25 @@ class UsuarioDao extends Conexao{
         }
     }
 
-    public function definirConcursosInteressados(int $idUser, int $idConcurso): void{
+    public function definirConcursosInteressados(InteresaUser $obj): void{
+        if(empty($obj->idUsuarios) && empty($obj->idConcurso) && empty($obj->usuarioIncrito) && empty($obj->statusConcurso)){
+            echo "Error in " . __METHOD__ . "Dados vazios";    
+            exit();
 
+        }
+
+        $idUsuario = $obj->idUsuario;
+        $idConcurso = $obj->idConcurso;
+        $usuarioIncrito = $obj->usuarioIncrito == 0? NULL : $obj->usuarioIncrito;
+        $statusConcurso = $obj->statusConcurso == 0? NULL : $obj->statusConcurso;
+            
         try {
 
             $query = $this->conect->prepare('INSERT INTO tb_concurso_usuario(id_usuario, id_concurso) VALUES (:id_usuario, :id_concurso)');
-            $query->bindParam(':id_usuario', $idUser);
+            $query->bindParam(':id_usuario', $idUsuario);
             $query->bindParam(':id_concurso', $idConcurso);
+            $query->bindParam(':id_concurso', $usuarioIncrito);
+            $query->bindParam(':id_concurso', $statusConcurso);
             $query->execute();
 
         } catch (PDOException $erro) {

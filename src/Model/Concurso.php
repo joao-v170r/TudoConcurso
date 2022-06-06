@@ -2,6 +2,9 @@
 namespace TudoConcurso\Model;
 
 class Concurso {
+
+    use AcesssoAtributos;
+
     private string $dtProva;
     private string $nome;
     private string $localProva;
@@ -18,10 +21,6 @@ class Concurso {
         //
     }
 
-    public function getNome (): string{
-        return $this->nome;
-    }
-
     public function setNome (string $nome): void{
         if(strlen($nome) > 5){
             $this->nome = $nome;
@@ -29,10 +28,6 @@ class Concurso {
             echo "Error in " . __METHOD__ ;
             return;
         } 
-    }
-
-    public function getLocalProva (): string{
-        return $this->localProva;
     }
 
     public function setLocalProva (string $localProva): void{
@@ -45,10 +40,6 @@ class Concurso {
         } 
     }
 
-    public function getPerfil (): string{
-        return $this->perfil;
-    }
-
     public function setPerfil (string $perfil): void{
         $tipoConcurso = ['Judiciario', 'Adminstrativo', 'Controle', 'Segurança', 'Fiscal', 'Lesgislativa', 'Alta Gestão', 'Magistério', 'Militar', 'Bancária'];
         if(in_array($perfil, $tipoConcurso)){
@@ -59,10 +50,6 @@ class Concurso {
         } 
     }
     
-    public function getDtProva (): string{
-        return $this->dtProva;
-    }
-
     public function setDtProva (string $dtProva): void{
         if(!empty($dtProva) && $dtProva != "00/00/0000"){
             $this->dtProva = date('Y-m-d', strtotime($dtProva));;
@@ -70,9 +57,6 @@ class Concurso {
             echo "Error in " . __METHOD__ ;
             exit();
         }
-    }
-    public function getIdBanca(): int{
-        return $this->idBanca;
     }
 
     public function setIdBanca (int $idBanca): void{
@@ -82,10 +66,6 @@ class Concurso {
             echo "Error in " . __METHOD__ ;
             return;
         }      
-    }
-
-    public function getTipo (): string {
-        return $this->tipo;
     }
 
     public function setTipos (string $tipo): void{
