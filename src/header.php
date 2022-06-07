@@ -17,7 +17,7 @@
 <title>Tudo Concurso</title>
 </head>
 <body>
-<!--<nav class="navbar navbar-expand-lg navSite col-md-12">
+<nav class="navbar navbar-expand-lg navSite col-md-12">
     <a class="navbar-brand" href="#">
       <svg width="261" height="49" viewBox="0 0 261 49" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_i_2_4)">
@@ -47,4 +47,4 @@
           <a class="items-menuBar nav-link" href="#">Meus concursos</a>
         </div>
     </div>
-</nav>-->
+</nav>

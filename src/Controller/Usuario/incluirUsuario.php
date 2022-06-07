@@ -13,15 +13,13 @@ $cep = isset($_POST['cep']) ?  addslashes($_POST['cep']) : '';
 $email = isset($_POST['email']) ? addslashes($_POST['email']) : '';
 $senha = isset($_POST['senha']) ? addslashes($_POST['senha']) : '';
 
- 
- $objUser->nome = $nome;
- $objUser->cep = $cep;
- $objUser->email = $email;
- $objUser->dtNascimento = $dtNascimento;
- $objUser->senha = $senha;        
-           
- 
- $objUserDao->salvaUsuario($objUser);
- 
+$objUser->nome = $nome;
+$objUser->cep = $cep;
+$objUser->email = $email;
+$objUser->dtNascimento = $dtNascimento;
+$objUser->senha = $senha;        
+        
+$objUserDao->salvaUsuario($objUser);
+
 
 ?>
