@@ -13,9 +13,9 @@ $dadosUserConcurso = [];
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
 $idUsuario = $_POST['idUser'];
- 
- $objUser->nome = $nome;
- $objUser->setCep($cep);
+
+$objUser->nome = $nome;
+$objUser->setCep($cep);
 
  
  //print_r($objUser);

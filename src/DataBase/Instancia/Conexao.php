@@ -21,7 +21,7 @@ abstract class Conexao {
 
             if (!isset($this->conect)) {
 
-                $this->conect = new PDO("mysql:host=localhost;dbname=id18889760_bdmanualphp", "id18889760_hoot", "tF/JJDC%xklL2JU+");
+                $this->conect = new PDO("mysql:host=localhost;dbname=tudo_concurso_base", "root", "");
                 $this->conect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             }            

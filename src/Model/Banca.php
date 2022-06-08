@@ -1,7 +1,8 @@
 <?php
 namespace TudoConcurso\Model;
 
-class Banca {
+class Banca 
+{
 
     use AcesssoAtributos;
 
@@ -13,12 +14,20 @@ class Banca {
     }
 
     public function setNome (string $nome): void{
-        if(strlen($nome) > 5){
-            $this->nome = $nome;
+        if(strlen($nome) < 5){
+            echo "Erro in " . __METHOD__;
+            return;  
         }
+
+        $this->nome = $nome;
     }
 
     public function setDescricao (string $descricao): void{
+        if(empty($descricao)){
+            echo "Erro in " . __METHOD__;
+            return;
+        }
+        
         $this->descricao = $descricao;
     }
     
