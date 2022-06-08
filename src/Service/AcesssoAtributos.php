@@ -1,5 +1,5 @@
 <?php
-namespace TudoConcurso\Model;
+namespace TudoConcurso\Service;
 
 trait AcesssoAtributos 
 {

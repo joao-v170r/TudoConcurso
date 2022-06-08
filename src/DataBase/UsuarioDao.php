@@ -14,17 +14,17 @@ class UsuarioDao extends Conexao{
     }    
     
     public function salvaUsuario(Usuario $objUser): void{
-        if(empty($objUser->senha) && empty($objUser->email) && empty($objUser->nome) && empty($objUser->cep) && empty($objUser->dtNascimento)){                        
-            //print_r($objUser);
-            echo "Error in " . __METHOD__ . "Dados vazios";    
-            exit();        
-        }
-        
         $dtNascimento = $objUser->dtNascimento;
         $nome = $objUser->nome;
         $cep = $objUser->cep;
         $email = $objUser->email;
         $senha = $objUser->senha;
+
+        if(empty($senha) || empty($email) || empty($nome) || empty($cep) || empty($dtNascimento)){                        
+            print_r($objUser);
+            //echo "Error in " . __METHOD__ . "Dados vazios";    
+            exit();        
+        } 
 
         try {
 
