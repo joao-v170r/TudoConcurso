@@ -1,7 +1,8 @@
 <?php 
 namespace TudoConcurso\Model;
 
-class Usuario {
+class Usuario 
+{
 
     use AcesssoAtributos;
 
@@ -24,10 +25,6 @@ class Usuario {
         self::$qntUsuarios--;
     }
 
-    public function getEnsino() {
-        return $this->ensino;
-    }
-
     public function setEnsino (string $ensino): void{
         if(!empty($ensino)){
             $this->ensino = $ensino;
@@ -35,10 +32,6 @@ class Usuario {
             echo "Error in " . __METHOD__ ;
             return;
         }
-    }
-
-    public function getSalarioEsperado() {
-        return $this->salarioEsperado;
     }
 
     public function setSalarioEsperado (string $salarioEsperado): void{
@@ -50,10 +43,6 @@ class Usuario {
         }
     }
 
-    public function getNome() {
-        return $this->nome;
-    }
-
     public function setNome (string $nome): void{
         if(strlen($nome) > 5){
             $this->nome = $nome;
@@ -61,10 +50,6 @@ class Usuario {
             echo "Error in " . __METHOD__ ;
             return;
         }
-    }
-
-    public function getCep (): string{
-        return $this->cep;
     }
 
     public function setCep (string $cep): void{
@@ -77,10 +62,6 @@ class Usuario {
         
     }
 
-    public function getEmail (): string{
-        return $this->email;
-    }
-
     public function setEmail (string $email): void{
         if(!empty($email)){
             $this->email = $email;
@@ -88,10 +69,6 @@ class Usuario {
             echo "Error in " . __METHOD__ ;
             return;
         }
-    }
-    
-    public function getDtNascimento (): string{
-        return $this->dtNascimento;
     }
 
     public function setDtNascimento (string $dtNascimento): void{
@@ -101,9 +78,6 @@ class Usuario {
             echo "Error in " . __METHOD__ ;
             return;
         }
-    }
-    public function getSenha(): string{
-        return $this->senha;
     }
 
     public function setSenha (string $senha): void{
