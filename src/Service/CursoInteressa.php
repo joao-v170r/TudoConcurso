@@ -1,9 +1,10 @@
 <?php
 namespace TudoConcurso\Service;
 
-class ConcursoUsuario {
+class ConcursoUsuario 
+{
 
-    use TraitGetSet;
+    use AcesssoAtributos;
 
     private int $idUsuario;
     private int $idConcurso;
