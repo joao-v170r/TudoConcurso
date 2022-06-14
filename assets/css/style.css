@@ -63,3 +63,7 @@
 	background-position: right;
 }
 
+.block-navMenu{
+    display: block;
+    height: 6.5rem;
+}
