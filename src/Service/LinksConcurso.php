@@ -12,7 +12,7 @@ class LinksConcurso
     private int $tipo; 
     private string $nome;
     private string $descricao;
-    private int $idConcurso;
+    //private int $idConcurso;
     private string $link;
 
     public function __construct() {
@@ -28,12 +28,12 @@ class LinksConcurso
     }
 
     public function setTipo (int $tipo): void{
-        if(empty($tipo) || $tipo > 3){
+        if(empty($tipo) || $tipo > 3 || $tipo < 0) {
             echo "Erro in " . __METHOD__;
             return;
         }
 
-        $this->tipos = $tipo;
+        $this->tipo = $tipo;
     }
 
     public function setNome (string $nome): void{

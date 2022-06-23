@@ -46,11 +46,11 @@
     </div>
     <p class="question">Você trabalharia fora da região em que você mora atualmente?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao6" /> Sim</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao6" /> Provavelmente sim</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao6" /> Não sei</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao6" /> Provavelmente não</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao6" /> Não</label>
+      <label><input class="pageInput" type="radio" value="Trabalharia fora" name="questao6" /> Sim</label>
+      <label><input class="pageInput" type="radio" value="Possivelmente trabalharia fora" name="questao6" /> Provavelmente sim</label>
+      <label><input class="pageInput" type="radio" value="Talvez trabalharia fora" name="questao6" /> Não sei</label>
+      <label><input class="pageInput" type="radio" value="Possivelmente não trabalharia fora" name="questao6" /> Provavelmente não</label>
+      <label><input class="pageInput" type="radio" value="Não trabalharia fora" name="questao6" /> Não</label>
     </div>
     <p class="question">Qual é a sua pretensão salarial?</p>
     <div class="question-answer">
@@ -62,35 +62,35 @@
     </div>
     <p class="question">Com qual tipo de material de estudo você tem mais afinidade?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao8" /> Apostilas</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao8" /> Vídeo-aulas</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao8" /> Cursos presenciais</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao8" /> Cursos à distância</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao8" /> Provas antigas</label>
+      <label><input class="pageInput" type="radio" value="Apostilas" name="questao8" /> Apostilas</label>
+      <label><input class="pageInput" type="radio" value="Video-aulas" name="questao8" /> Video-aulas</label>
+      <label><input class="pageInput" type="radio" value="Cursos presenciais" name="questao8" /> Cursos presenciais</label>
+      <label><input class="pageInput" type="radio" value="Cursos à distância" name="questao8" /> Cursos à distância</label>
+      <label><input class="pageInput" type="radio" value="Provas antigas" name="questao8" /> Provas antigas</label>
     </div>
     <p class="question">Sobre qual tipo de concurso você deseja se informar?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao9" /> Concurso público municipal</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao9" /> Concurso público estadual</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao9" /> Concurso público federal</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao9" /> Concurso público distrital</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao9" /> Todos</label>
+      <label><input class="pageInput" type="radio" value="Concurso público municipal" name="questao9" /> Concurso público municipal</label>
+      <label><input class="pageInput" type="radio" value="Concurso público estadual" name="questao9" /> Concurso público estadual</label>
+      <label><input class="pageInput" type="radio" value="Concurso público federal" name="questao9" /> Concurso público federal</label>
+      <label><input class="pageInput" type="radio" value="Concurso público distrital" name="questao9" /> Concurso público distrital</label>
+      <label><input class="pageInput" type="radio" value="Todos" name="questao9" /> Todos</label>
     </div>
     <p class="question">Qual carga horária de trabalho seeria ideal para você?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao10" /> 20h por semana</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao10" /> 30h por semana</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao10" /> 40h por semana</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao10" /> Mais de 40h por semana</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao10" /> Disponibilidade para plantões</label>
+      <label><input class="pageInput" type="radio" value="20h" name="questao10" /> 20h por semana</label>
+      <label><input class="pageInput" type="radio" value="30h" name="questao10" /> 30h por semana</label>
+      <label><input class="pageInput" type="radio" value="40h" name="questao10" /> 40h por semana</label>
+      <label><input class="pageInput" type="radio" value=">40h" name="questao10" /> Mais de 40h por semana</label>
+      <label><input class="pageInput" type="radio" value="Plantão" name="questao10" /> Disponibilidade para plantões</label>
     </div>
     <p class="question">Você tem disponibilidade para realizar provas em outras cidades?</p>
     <div class="question-answer">
-      <label><input class="pageInput" type="radio" value="none" name="questao11" /> Sim</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao11" /> Provavelmente sim</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao11" /> Não sei</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao11" /> Provavelmente não</label>
-      <label><input class="pageInput" type="radio" value="none" name="questao11" /> Não</label>
+      <label><input class="pageInput" type="radio" value="Tem disponibilidade" name="questao11" /> Sim</label>
+      <label><input class="pageInput" type="radio" value="Possivelmente tem disponibilidade" name="questao11" /> Provavelmente sim</label>
+      <label><input class="pageInput" type="radio" value="Talvez tenha disponibilidade" name="questao11" /> Não sei</label>
+      <label><input class="pageInput" type="radio" value="Possivelmente não tem disponibilidade" name="questao11" /> Provavelmente não</label>
+      <label><input class="pageInput" type="radio" value="Não tem disponibilidade" name="questao11" /> Não</label>
     </div>
   </form>
 </div>

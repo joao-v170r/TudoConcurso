@@ -17,6 +17,10 @@ class Concurso
     private int $qntVagas;
     private string $comissao;
     private float $valorProva;
+    
+    private static array $perfisConcurso = ['Judiciario', 'Adminstrativo', 'Controle', 'Segurança', 'Fiscal', 'Lesgislativa', 'Alta Gestão', 'Magistério', 'Militar', 'Bancária'];
+
+    private static array $tipoConcurso = ['Distrital', 'Municipal', 'Estadual', 'Federal'];
 
     public function __construct() {
         //
@@ -42,9 +46,8 @@ class Concurso
     }
 
     public function setPerfil (string $perfil): void{
-        $tipoConcurso = ['Judiciario', 'Adminstrativo', 'Controle', 'Segurança', 'Fiscal', 'Lesgislativa', 'Alta Gestão', 'Magistério', 'Militar', 'Bancária'];
         
-        if(!in_array($perfil, $tipoConcurso)){
+        if(!in_array($perfil, self::$perfisConcurso)){
             echo "Erro in " . __METHOD__;
             return;       
         } 
@@ -71,9 +74,8 @@ class Concurso
     }
 
     public function setTipos (string $tipo): void{
-        $listTipos = ['Distrital', 'Municipal', 'Estadual', 'Federal'];
 
-        if(!in_array($tipo, $listTipos)){
+        if(!in_array($tipo, self::$tipoConcurso)){
             echo "Error in " . __METHOD__ ;
             return;
         } 
