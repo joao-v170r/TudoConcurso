@@ -1,41 +1,35 @@
 <?php
     include 'header.php';
+
+    if($_POST['btn'] == 'Login'){
+        require "Controller/Usuario/logar.php";
+    }
 ?>
 <div>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/login.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </div>
 <div class="body-content">
     <img class="wave" src="../assets/img/wave.png">
-    <div class="container">
+    <div class="body-login-content">
         <div class="img">
-        <img src="../assets/img/bg.svg">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_4nkdwted.json"  background="rgba(0, 0, 0, 0)"  speed="1"  style="width: 800px; height: 800px; transform: none!important;"  loop  autoplay></lottie-player>
         </div>
         <div class="login-content">
-        <form action="index.html">
-            <img src="../assets/img/avatar.svg">
+        <form action="" method="POST" >
             <h2 class="title">Welcome</h2>
-            <div class="input-div one">
-            <div class="i">
-                <i class="fas fa-user"></i>
+                <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <h5>Email</h5>
+                    <input type="text" class="input" name="email" placeholder="">
+                </div>
             </div>
-            <div class="div">
-                <h5>Username</h5>
-                <input type="text" class="input">
-            </div>
-            </div>
-            <div class="input-div pass">
-            <div class="i"> 
-                <i class="fas fa-lock"></i>
-            </div>
-            <div class="div">
-                <h5>Password</h5>
-                <input type="password" class="input">
-            </div>
-            </div>
-            <a href="#">Forgot Password?</a>
-            <input type="submit" class="btn" value="Login">
+            <input type="submit" class="btn" name="btn" value="Login">
         </form>
         </div>
     </div>

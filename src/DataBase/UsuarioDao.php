@@ -3,7 +3,7 @@ namespace TudoConcurso\DataBase;
 
 use TudoConcurso\DataBase\Instancia\Conexao;
 use TudoConcurso\Model\Usuario;
-use TudoConcurso\Service\InteresaUser;
+use TudoConcurso\Service\ConcursoUsuario;
 
 use PDOException;
 
@@ -72,7 +72,7 @@ class UsuarioDao extends Conexao{
         }
     }
 
-    public function definirConcursosInteressados(InteresaUser $obj): void{
+    public function definirConcursosInteressados(ConcursoUsuario $obj): void{
         if(empty($obj->idUsuarios) && empty($obj->idConcurso) && empty($obj->usuarioIncrito) && empty($obj->statusConcurso)){
             echo "Error in " . __METHOD__ . "Dados vazios";    
             exit();
@@ -119,5 +119,34 @@ class UsuarioDao extends Conexao{
         }
     }
     
+    public function validaUsuario(Usuario $objUser): bool{
+        $email = $objUser->email;
+        //$senha = $objUser->senha;
+
+        if(empty($senha) || empty($email)){                        
+            //print_r($objUser);
+            echo "Error in " . __METHOD__ . "Dados vazios";    
+            return False;       
+        }
+
+        try {
+
+            $query = $this->conect->prepare('SELECT * FROM tb_usuario WHERE de_email = :de_email');    
+            $query->bindParam(':de_email', $email);
+            //$query->bindParam(':de_senha', $senha);
+            $resultQuery = $query->execute();
+
+            if(empty($resultQuery)){
+                return False;
+            } 
+
+            return True;
+        } catch (PDOException $erro) {
+
+            print_r($erro);
+            echo "Error in " . __METHOD__ ;
+            
+        } 
+    }
 }
 ?>

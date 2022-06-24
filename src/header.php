@@ -1,7 +1,6 @@
 <?php
   require 'autoload.php';
 
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +16,9 @@
 <title>Tudo Concurso</title>
 </head>
 <body>
+<?php if($_POST['User']){?>
 <nav class="navbar navbar-expand-lg navSite col-md-12">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <svg width="261" height="49" viewBox="0 0 261 49" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_i_2_4)">
               <path d="M15.535 48C14.9717 48 14.4733 47.87 14.04 47.61C13.6067 47.3067 13.39 46.8733 13.39 46.31V4.515H2.47C1.95 4.515 1.53833 4.32 1.235 3.93C0.931667 3.49666 0.78 3.02 0.78 2.5C0.78 1.98 0.931667 1.525 1.235 1.135C1.53833 0.701666 1.95 0.485 2.47 0.485H28.535C29.0983 0.485 29.51 0.701666 29.77 1.135C30.03 1.525 30.16 1.95833 30.16 2.435C30.16 2.955 30.03 3.43167 29.77 3.865C29.51 4.29833 29.0983 4.515 28.535 4.515H17.68V46.31C17.68 46.8733 17.4417 47.3067 16.965 47.61C16.5317 47.87 16.055 48 15.535 48Z" fill="#F57B0A"/>
@@ -43,9 +43,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="items-menuBar nav-link" href="#">Explorar</a>
-          <a class="items-menuBar nav-link" href="#">Meus concursos</a>
+          <a class="items-menuBar nav-link" href="explorar.php">Explorar</a>
+          <a class="items-menuBar nav-link" href="home.php">Meus concursos</a>
         </div>
     </div>
 </nav>
 <div class="display-block-navBar"></div>
+<?php }?>
