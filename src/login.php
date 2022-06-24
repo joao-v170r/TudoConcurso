@@ -26,7 +26,7 @@
                 </div>
                 <div class="div">
                     <h5>Email</h5>
-                    <input type="text" class="input" name="email" placeholder="">
+                    <input type="email" class="input" name="email" placeholder="">
                 </div>
             </div>
             <input type="submit" class="btn" name="btn" value="Login">
