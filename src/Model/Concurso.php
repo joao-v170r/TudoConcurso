@@ -18,9 +18,9 @@ class Concurso
     private string $comissao;
     private float $valorProva;
     
-    private static array $perfisConcurso = ['Judiciario', 'Adminstrativo', 'Controle', 'Segurança', 'Fiscal', 'Lesgislativa', 'Alta Gestão', 'Magistério', 'Militar', 'Bancária'];
+    private static array $perfisConcurso = [ 1 => 'Judiciario', 'Adminstrativo', 'Controle', 'Segurança', 'Fiscal', 'Lesgislativa', 'Alta Gestão', 'Magistério', 'Militar', 'Bancária'];
 
-    private static array $tipoConcurso = ['Distrital', 'Municipal', 'Estadual', 'Federal'];
+    private static array $tipoConcurso = [1 => 'Distrital', 'Municipal', 'Estadual', 'Federal'];
 
     public function __construct() {
         //
@@ -37,17 +37,18 @@ class Concurso
 
     public function setLocalProva (string $localProva): void{
         
-        if(!empty($localProva)){
+        if(strlen($localProva) != 9){
             echo "Error in " . __METHOD__ ;
             return;
-        }         
-        
+        }
+
         $this->localProva = $localProva;
+       
     }
 
-    public function setPerfil (string $perfil): void{
+    public function setPerfil (int $perfil): void{
         
-        if(!in_array($perfil, self::$perfisConcurso)){
+        if(!array_key_exists($perfil, self::$perfisConcurso)){
             echo "Erro in " . __METHOD__;
             return;       
         } 
@@ -73,9 +74,9 @@ class Concurso
         $this->idBanca = $idBanca;
     }
 
-    public function setTipos (string $tipo): void{
+    public function setTipos (int $tipo): void{
 
-        if(!in_array($tipo, self::$tipoConcurso)){
+        if(!array_key_exists($tipo, self::$tipoConcurso)){
             echo "Error in " . __METHOD__ ;
             return;
         } 

@@ -8,8 +8,10 @@ $objUser = new Usuario();
 $objUserDao = new UsuarioDao();
 
 $email = isset($_POST['email']) ? addslashes($_POST['email']) : '';
+$senha = isset($_POST['senha']) ? addslashes($_POST['senha']) : '12345678';
 
 $objUser->email = $email;
+$objUser->senha = $senha;
 
 if($objUserDao->validaUsuario($objUser)){
     $_SESSION['UserEmail'] = $objUser->email;

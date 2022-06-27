@@ -11,26 +11,25 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </div>
-<div class="body-content">
+<div class="body-content col-xs-12 col-sm-12 col-md-12">
     <img class="wave" src="../assets/img/wave.png">
-    <div class="body-login-content">
-        <div class="img">
+    <div class="body-login-content col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_4nkdwted.json"  background="rgba(0, 0, 0, 0)"  speed="1"  style="width: 800px; height: 800px; transform: none!important;"  loop  autoplay></lottie-player>
         </div>
         <div class="login-content">
-        <form action="" method="POST" >
-            <h2 class="title">Welcome</h2>
-                <div class="input-div one">
-                <div class="i">
-                    <i class="fas fa-user"></i>
+            <form action="" method="POST" >
+                <h2 class="title">Bem-Vindo</h2>
+                    <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="email" class="input" name="email" placeholder="Email">
+                    </div>
                 </div>
-                <div class="div">
-                    <h5>Email</h5>
-                    <input type="email" class="input" name="email" placeholder="">
-                </div>
-            </div>
-            <input type="submit" class="btn" name="btn" value="Login">
-        </form>
+                <input type="submit" class="btn" name="btn" value="Login">
+            </form>
         </div>
     </div>
 </div>

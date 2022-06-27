@@ -6,6 +6,7 @@ use TudoConcurso\Model\Concurso;
 use TudoConcurso\Service\LinksConcurso;
 
 use PDOException;
+use PDO;
 
 class ConcursoDao extends Conexao{
 
@@ -60,7 +61,7 @@ class ConcursoDao extends Conexao{
     }
     
     public function salvaLinksConcurso(LinksConcurso $objLinksConc): bool{
-        $tipo = $objLinksConc->tipo;
+        $tipo = (int)$objLinksConc->tipo;
         $nome = $objLinksConc->nome;
         $descricao = $objLinksConc->descricao;
         $link = $objLinksConc->link;
@@ -73,11 +74,11 @@ class ConcursoDao extends Conexao{
 
         try {
 
-            $query = $this->conect->prepare('INSERT INTO tb_links_concurso(numb_tipo, de_links, de_nome, de_senha, de_descricao) VALUES (:numb_tipo, :de_links, :de_nome, :de_senha, :de_descricao)');
-            $query->bindParam(':de_links', $link);
-            $query->bindParam(':de_nome', $nome);
-            $query->bindParam(':de_descricao', $descricao);
-            $query->bindParam(':numb_tipo', $tipo);
+            $query = $this->conect->prepare('INSERT INTO tb_links_concurso(numb_tipo, de_links, de_nome, de_descricao) VALUES (:numb_tipo, :de_links, :de_nome,:de_descricao)');
+            $query->bindParam(':de_links', $link, PDO::PARAM_STR);
+            $query->bindParam(':de_nome', $nome, PDO::PARAM_STR);
+            $query->bindParam(':de_descricao', $descricao, PDO::PARAM_STR);
+            $query->bindParam(':numb_tipo', $tipo, PDO::PARAM_INT);
             $query->execute(); 
 
             return True;
@@ -90,6 +91,17 @@ class ConcursoDao extends Conexao{
             //exit();
             
         }
+    }
+
+    public function selectAllConcursos(int $grupoConcurso):array {
+        $allCards = [];
+
+        if(empty($grupoConcurso)){
+            echo "Error in " . __METHOD__ . " necessit Categoria";
+        }
+        
+        
+        return $allCards;
     }
 }
 ?>

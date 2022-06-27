@@ -4,7 +4,7 @@
 <div class="body-content"> 
     <div class="row">
         <?php for($i = 0; $i < 5; $i++){ ?>
-        <div class=" col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="card card-notice">
                 <img src="../assets/img/livros.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="card card-notice">
                 <img src="../assets/img/livros.png" class="card-img-top" alt="...">
                 <div class="card-body">

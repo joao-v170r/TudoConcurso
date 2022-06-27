@@ -6,6 +6,7 @@ use TudoConcurso\Model\Usuario;
 use TudoConcurso\Service\ConcursoUsuario;
 
 use PDOException;
+use PDO;
 
 class UsuarioDao extends Conexao{
 
@@ -121,7 +122,7 @@ class UsuarioDao extends Conexao{
     
     public function validaUsuario(Usuario $objUser): bool{
         $email = $objUser->email;
-        //$senha = $objUser->senha;
+        $senha = $objUser->senha;
 
         if(empty($senha) || empty($email)){                        
             //print_r($objUser);
@@ -134,8 +135,9 @@ class UsuarioDao extends Conexao{
             $query = $this->conect->prepare('SELECT * FROM tb_usuario WHERE de_email = :de_email');    
             $query->bindParam(':de_email', $email);
             //$query->bindParam(':de_senha', $senha);
-            $resultQuery = $query->execute();
-
+            $query->execute();
+            $resultQuery = $query->rowCount(); //fetchAll(PDO::FETCH_ASSOC);
+            
             if(empty($resultQuery)){
                 return False;
             } 

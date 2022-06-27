@@ -12,9 +12,6 @@ trait AcesssoAtributos
     }
 
     public function __set(string $nameVariavel, $value){
-        if(isset($this->$nameVariavel)){
-            return;
-        }
 
         $metodo = "set";
 

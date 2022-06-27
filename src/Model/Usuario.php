@@ -1,7 +1,7 @@
 <?php 
 namespace TudoConcurso\Model;
 
-class Usuario 
+class Usuario
 {
 
     use AcesssoAtributos;
@@ -53,13 +53,12 @@ class Usuario
     }
 
     public function setCep (string $cep): void{
-        if(strlen($cep) == 9){
-            $this->cep = $cep;
-        } else {
+        if(strlen($cep) != 9){
             echo "Error in " . __METHOD__ ;
             return;
         }
-        
+
+        $this->cep = $cep;
     }
 
     public function setEmail (string $email): void{
